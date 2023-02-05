@@ -9,9 +9,9 @@ const NavigationButton = () => {
     }
 
     return (
-        <div className='absolute bottom-14 px-40 space-x-[56rem] ' >
-            <button disabled={page<=1} className='text-white bg-slate-600 p-3 px-7 rounded-md active:bg-slate-800' onClick={() => previousPage({ name, repo, page })} >&larr; Previous</button>
-            <button disabled={ issues.length === 0 } className=' text-white bg-slate-600 p-3 px-7 rounded-md active:bg-slate-800' onClick={() => nextPage({name, repo, page })} >&rarr; Next</button>
+        <div className='px-40' >
+            <button disabled={page<=1} className=' scale-75 md:scale-100 absolute left-5 md:left-28 bottom-10 md:bottom-10 text-white bg-slate-600 p-3 px-7 rounded-md active:bg-slate-800' onClick={() => previousPage({ name, repo, page })} >&larr; Previous</button>
+            <button disabled={ issues.length === 0 } className=' scale-75 md:scale-100 absolute right-5 md:right-28 bottom-10 md:bottom-10 text-white bg-slate-600 p-3 px-7 rounded-md active:bg-slate-800' onClick={() => nextPage({name, repo, page })} >&rarr; Next</button>
         </div>
     )
 }

@@ -10,12 +10,12 @@ const IssuesPage = () => {
     } 
     
     const listItems = issues.map((issue) =>
-        <div className='my-5 mx-auto bg-red-500 px-10 p-3 rounded-md w-[60rem]' key={issue.id} >
+        <div className='my-5 mx-auto bg-red-500 px-10 p-3 rounded-md md:w-[60rem] text-xs md:text-base' key={issue.id} >
           <p>&#9888; &nbsp; {issue.title}</p>
         </div>
     )
   return (
-    <div className='pt-14 p-10 relative h-[41rem] ' >
+    <div className='md:py-12 p-10 relative h-[39rem] ' >
       {issues.length === 0 ? <div><p className='text-center font-bold text-3xl mt-40 ' >End</p></div>:null }
       {listItems}      
       <NavigationButton />
